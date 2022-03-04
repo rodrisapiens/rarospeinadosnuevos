@@ -1,0 +1,133 @@
+*,
+::after,
+::before {
+  font-family: "Roboto Slab", serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.morphing {
+  position: relative;
+  font-size: 120px;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  -webkit-filter: contrast(25) blur(1px);
+          filter: contrast(25) blur(1px);
+}
+
+.word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: word 10s infinite ease-in-out;
+          animation: word 10s infinite ease-in-out;
+}
+
+.word:nth-child(1) {
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
+}
+
+.word:nth-child(2) {
+  -webkit-animation-delay: -8s;
+          animation-delay: -8s;
+}
+
+.word:nth-child(3) {
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+}
+
+.word:nth-child(4) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+
+@-webkit-keyframes word {
+  0%,
+  5%,
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%,
+  80% {
+    -webkit-filter: blur(1em);
+            filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+@keyframes word {
+  0%,
+  5%,
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%,
+  80% {
+    -webkit-filter: blur(1em);
+            filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+.secondWords {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: word 5s infinite ease-in-out;
+          animation: word 5s infinite ease-in-out;
+}
+
+.secondWords:nth-child(1) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+.secondWords:nth-child(2) {
+  -webkit-animation-delay: -3.33333s;
+          animation-delay: -3.33333s;
+}
+
+@keyframes word {
+  0%,
+  5%,
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%,
+  80% {
+    -webkit-filter: blur(1em);
+            filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+.response {
+  border-style: solid;
+  background-color: #414A4C;
+  border-color: white;
+  color: white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 11em;
+  height: 4em;
+  padding: 1em;
+  text-align: center;
+}
+/*# sourceMappingURL=app.css.map */
