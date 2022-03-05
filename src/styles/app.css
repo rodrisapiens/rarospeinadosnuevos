@@ -115,9 +115,45 @@
   }
 }
 
+.thirdWords {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: word 5s infinite ease-in-out;
+          animation: word 5s infinite ease-in-out;
+}
+
+.thirdWords:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+
+.thirdWords:nth-child(2) {
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+
+@keyframes word {
+  0%,
+  5%,
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%,
+  80% {
+    -webkit-filter: blur(1em);
+            filter: blur(1em);
+    opacity: 0;
+  }
+}
+
 .response {
   border-style: solid;
-  background-color: #414A4C;
+  background-color: #414a4c;
   border-color: white;
   color: white;
   position: absolute;
@@ -129,5 +165,46 @@
   height: 4em;
   padding: 1em;
   text-align: center;
+}
+
+.response:hover {
+  -webkit-transform: scale(1.1) translatex(-45%) translateY(-45%);
+          transform: scale(1.1) translatex(-45%) translateY(-45%);
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+.vynil {
+  position: relative;
+  width: 10em;
+  -webkit-animation: vynil 10s infinite linear;
+          animation: vynil 10s infinite linear;
+}
+
+@-webkit-keyframes vynil {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes vynil {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+.play {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 /*# sourceMappingURL=app.css.map */

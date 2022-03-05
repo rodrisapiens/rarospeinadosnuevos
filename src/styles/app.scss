@@ -7,8 +7,11 @@
 }
 $speed: 10s;
 $wordCount: 4;
-$secondSpeed:5s;
-$secondWordCount:2;
+$secondSpeed: 5s;
+$secondWordCount: 2;
+$thirdWordCount: 3;
+$thirdSpeed: 2s;
+
 .morphing {
     position: relative;
     font-size: 120px;
@@ -72,10 +75,37 @@ $secondWordCount:2;
         }
     }
 }
-.response
-{
+.thirdWords {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: word $secondSpeed infinite ease-in-out;
+
+    @for $i from 0 to $secondWordCount {
+        &:nth-child(#{$i + 1}) {
+            animation-delay: ($thirdSpeed / ($thirdWordCount + 1) * $i) - $thirdSpeed;
+        }
+    }
+
+    @keyframes word {
+        0%,
+        5%,
+        100% {
+            filter: blur(0px);
+            opacity: 1;
+        }
+        20%,
+        80% {
+            filter: blur(1em);
+            opacity: 0;
+        }
+    }
+}
+
+.response {
     border-style: solid;
-    background-color: #414A4C;
+    background-color: #414a4c;
     border-color: white;
     color: white;
     position: absolute;
@@ -86,4 +116,30 @@ $secondWordCount:2;
     height: 4em;
     padding: 1em;
     text-align: center;
+}
+.response:hover {
+    transform: scale(1.1) translatex(-45%) translateY(-45%);
+    transition: transform 0.1s ease;
+}
+.vynil
+{
+    position: relative;
+    width: 10em;
+    animation: vynil 10s infinite linear;
+}
+@keyframes vynil {
+
+   
+    100%{
+        transform: rotateZ(360deg);
+
+    }
+}
+.play
+{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100vw;
 }
