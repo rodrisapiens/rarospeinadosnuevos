@@ -209,6 +209,7 @@ transform: rotateZ(-2deg) translate(41px,26px);
     display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 width: 23em;
+align-items: center;
 }
 .instagram{
     grid-column: 2/span2;
@@ -216,17 +217,19 @@ width: 23em;
 .contact
 {
     width: 6em;
-    height: 5em;
-width: 6em;
 padding: .5em;
-background-color: transparent;
+background-color: rgba(63, 0, 93,.5);
 border:solid;
 border-color: #000;
 border-radius: 10px;
 font-family: inherit;
-font-weight: bolder;
+font-weight: 800;
 padding: 1em;
 font-size: 1em;
+height: 5em;
+    display: grid;
+    align-content: center;
+    color:white;
 }
 #jupe
 {
@@ -279,7 +282,6 @@ font-size: 2em;
 }
 .contact
 {
-    background-color: transparent;
     border:solid;
     border-color: #000;
     border-radius: 10px;
@@ -288,6 +290,8 @@ font-size: 2em;
     padding: 1em;
     font-size: 1em;
     height: 6em;
+    display: grid;
+    align-items: center;
 }
 .contact:hover
 {

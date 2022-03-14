@@ -315,6 +315,9 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   width: 23em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .instagram {
@@ -323,17 +326,21 @@ body {
 
 .contact {
   width: 6em;
-  height: 5em;
-  width: 6em;
   padding: .5em;
-  background-color: transparent;
+  background-color: rgba(63, 0, 93, 0.5);
   border: solid;
   border-color: #000;
   border-radius: 10px;
   font-family: inherit;
-  font-weight: bolder;
+  font-weight: 800;
   padding: 1em;
   font-size: 1em;
+  height: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
 }
 
 #jupe {
@@ -393,9 +400,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 33em;
   }
   .contact {
-    background-color: transparent;
     border: solid;
     border-color: #000;
     border-radius: 10px;
@@ -403,6 +410,12 @@ body {
     font-weight: bolder;
     padding: 1em;
     font-size: 1em;
+    height: 6em;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact:hover {
     -webkit-transform: scale(1.2);
