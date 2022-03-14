@@ -10,6 +10,8 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  background-color: #0E0C13;
 }
 
 .morphing {
@@ -252,6 +254,9 @@ body {
 .brillo {
   position: absolute;
   z-index: 4;
+}
+
+.brillo > image {
   -webkit-animation: brillo .1s linear infinite;
           animation: brillo .1s linear infinite;
   -webkit-animation-delay: 2.4s;
@@ -284,5 +289,42 @@ body {
   color: #FFFFFF;
   -webkit-transform: rotateZ(-2deg) translate(41px, 26px);
           transform: rotateZ(-2deg) translate(41px, 26px);
+}
+
+@media all and (min-width: 600px) {
+  .trackDescriber {
+    position: absolute;
+    z-index: 4;
+    font-size: 1em;
+    font-weight: bolder;
+    color: #FFFFFF;
+    -webkit-transform: rotateZ(-2deg) translate(41px, 26px);
+            transform: rotateZ(-2deg) translate(41px, 26px);
+    left: 42%;
+    top: 6%;
+    font-size: 2em;
+  }
+  .pua > image {
+    position: absolute;
+    transform-box: fill-box;
+    -webkit-transform: rotateZ(-4deg) translate(-1em, -1em);
+            transform: rotateZ(-4deg) translate(-1em, -1em);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-animation: pua 2s linear forwards;
+            animation: pua 2s linear forwards;
+  }
+  @-webkit-keyframes pua {
+    100% {
+      -webkit-transform: rotateZ(18deg) translate(0em, -2em);
+              transform: rotateZ(18deg) translate(0em, -2em);
+    }
+  }
+  @keyframes pua {
+    100% {
+      -webkit-transform: rotateZ(18deg) translate(0em, -2em);
+              transform: rotateZ(18deg) translate(0em, -2em);
+    }
+  }
 }
 /*# sourceMappingURL=app.css.map */

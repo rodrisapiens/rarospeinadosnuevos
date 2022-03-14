@@ -14,6 +14,8 @@ $thirdSpeed: 2s;
 body{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+background-color: #0E0C13;
 }
 
 .morphing {
@@ -166,6 +168,9 @@ transform-origin:center;
 {
 position: absolute;
 z-index: 4;
+}
+.brillo>image
+{
 animation: brillo .1s linear infinite;
 animation-delay: 2.4s;
 transform-box: fill-box;
@@ -185,4 +190,32 @@ transform-origin: center;
 font-weight: bolder;
 color: #FFFFFF;
 transform: rotateZ(-2deg) translate(41px,26px);
+}
+@media all and (min-width:600px) {
+    .trackDescriber
+    {
+        position:absolute;
+        z-index: 4;
+        font-size: 1em;
+    font-weight: bolder;
+    color: #FFFFFF;
+    transform: rotateZ(-2deg) translate(41px,26px);
+    left: 42%;
+top: 6%;
+font-size: 2em;
+    }
+    .pua>image
+{
+    position:absolute;
+    transform-box: fill-box;
+    transform: rotateZ(-4deg) translate(-1em, -1em);
+    transform-origin: top;
+    animation: pua 2s linear forwards;
+
+@keyframes pua {
+100%{
+    transform: rotateZ(18deg) translate(0em, -2em);
+}
+}
+}
 }

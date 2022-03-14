@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./styles/app.css"
-import vynil from "./images/favpng_phonograph-record-lp-record.png"
 import historia from './audio/001_HISTORIA.wav'
 import music1 from './audio/002_CLOSE TO THE EDGE(1).wav'
 import music2 from './audio/003_RUTA PERDEDORA(1).wav'
@@ -10,6 +9,10 @@ import { ReactComponent as Pua } from './images/mobile/puaD.svg'
 import { ReactComponent as Vinilo } from './images/mobile/ViniloD.svg'
 import { ReactComponent as BackGround } from "./images/mobile/FondoD.svg"
 import { ReactComponent as Brillo } from "./images/mobile/BrilloD.svg"
+import { ReactComponent as BackGroundD } from "./images/desk/h_fondo.svg"
+import { ReactComponent as PuaD } from "./images/desk/h_pua.svg"
+import { ReactComponent as BrilloD } from "./images/desk/h_brillo.svg"
+import { ReactComponent as ViniloD } from "./images/desk/h_vinilo.svg"
 function App() {
   const [response, setResponse] = useState("WE PLAY MUSIC")
   const [showButton, setShowButton] = useState(false);
@@ -122,23 +125,13 @@ function App() {
               </div>
               : response === "presenting" ?
                 <div className="present">
-                  <Pua className="pua" />
-                  <Vinilo className="vinilo" />
-                  <Brillo className="brillo" />
-                  <BackGround className="backGround" />
+                  {window.innerWidth<500?<Pua className="pua" />:<PuaD className="pua"/>}
+                  {window.innerWidth<500?<Vinilo className="vinilo" />:<ViniloD className="vinilo"/>}
+                  {window.innerWidth<500?<Brillo className="brillo" />:<BrilloD className="brillo"/>}
+                  {window.innerWidth<500?<BackGround className="backGround"/>:<BackGroundD className="backGround"/>}
                   <h1 className="trackDescriber">Now playing: {music}</h1>
                   {handleMusic(music)}
-                </div>
-                : response === "band photo" ?
-                  <div className="play">
-                    <h4 className="jp">RAROS PEINADOS NUEVOS - CRAZY NEW HAIRSTYLES</h4>
-                    <h5>by Juan Pedro Ramos </h5>
-                    <img src={vynil} alt="" className="vynil"></img>
-                    
-                    {handleMusic("historia")}
-                  </div>
-
-                  : response==="final"?<h1>el final xd</h1>:null
+                </div>:null
 
 
       }
