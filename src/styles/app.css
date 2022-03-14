@@ -252,6 +252,27 @@ body {
 .brillo {
   position: absolute;
   z-index: 4;
+  -webkit-animation: brillo .1s linear infinite;
+          animation: brillo .1s linear infinite;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes brillo {
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+  }
+}
+
+@keyframes brillo {
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+  }
 }
 
 .trackDescriber {
