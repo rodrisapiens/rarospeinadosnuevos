@@ -291,7 +291,59 @@ body {
           transform: rotateZ(-2deg) translate(41px, 26px);
 }
 
+.instagram {
+  width: 2em;
+}
+
+.contact:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s linear ease;
+  transition: -webkit-transform 1s linear ease;
+  transition: transform 1s linear ease;
+  transition: transform 1s linear ease, -webkit-transform 1s linear ease;
+}
+
+.contacts {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  z-index: 6;
+  gap: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 23em;
+}
+
+.instagram {
+  grid-column: 2/span2;
+}
+
+.contact {
+  width: 6em;
+  height: 5em;
+  width: 6em;
+  padding: .5em;
+  background-color: transparent;
+  border: solid;
+  border-color: #000;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: bolder;
+  padding: 1em;
+  font-size: 1em;
+}
+
+#jupe {
+  margin-left: -1.5em;
+}
+
 @media all and (min-width: 600px) {
+  #jupe {
+    margin-left: 0;
+  }
   .trackDescriber {
     position: absolute;
     z-index: 4;
@@ -307,8 +359,8 @@ body {
   .pua > image {
     position: absolute;
     transform-box: fill-box;
-    -webkit-transform: rotateZ(-4deg) translate(-1em, -1em);
-            transform: rotateZ(-4deg) translate(-1em, -1em);
+    -webkit-transform: rotateZ(-4deg) translate(-1em, 0em);
+            transform: rotateZ(-4deg) translate(-1em, 0em);
     -webkit-transform-origin: top;
             transform-origin: top;
     -webkit-animation: pua 2s linear forwards;
@@ -325,6 +377,40 @@ body {
       -webkit-transform: rotateZ(18deg) translate(0em, -2em);
               transform: rotateZ(18deg) translate(0em, -2em);
     }
+  }
+  .instagram {
+    width: 2em;
+  }
+  .contacts {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 80%;
+    left: 5%;
+    z-index: 6;
+    gap: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact {
+    background-color: transparent;
+    border: solid;
+    border-color: #000;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: bolder;
+    padding: 1em;
+    font-size: 1em;
+  }
+  .contact:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: -webkit-transform 1s linear ease;
+    transition: -webkit-transform 1s linear ease;
+    transition: transform 1s linear ease;
+    transition: transform 1s linear ease, -webkit-transform 1s linear ease;
   }
 }
 /*# sourceMappingURL=app.css.map */

@@ -191,7 +191,52 @@ font-weight: bolder;
 color: #FFFFFF;
 transform: rotateZ(-2deg) translate(41px,26px);
 }
+.instagram{
+    width: 2em;
+}
+
+.contact:hover
+{
+    transform: scale(1.2);
+    transition: transform 1s linear ease;
+}
+.contacts{
+    position: absolute;
+    top: 70%;
+    left:5%;
+    z-index:6;
+    gap:1em;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+width: 23em;
+}
+.instagram{
+    grid-column: 2/span2;
+}
+.contact
+{
+    width: 6em;
+    height: 5em;
+width: 6em;
+padding: .5em;
+background-color: transparent;
+border:solid;
+border-color: #000;
+border-radius: 10px;
+font-family: inherit;
+font-weight: bolder;
+padding: 1em;
+font-size: 1em;
+}
+#jupe
+{
+ margin-left: -1.5em;
+}
 @media all and (min-width:600px) {
+    #jupe
+{
+ margin-left:0;
+}
     .trackDescriber
     {
         position:absolute;
@@ -208,14 +253,43 @@ font-size: 2em;
 {
     position:absolute;
     transform-box: fill-box;
-    transform: rotateZ(-4deg) translate(-1em, -1em);
+    transform: rotateZ(-4deg) translate(-1em, 0em) ;
     transform-origin: top;
     animation: pua 2s linear forwards;
 
 @keyframes pua {
+ 
 100%{
     transform: rotateZ(18deg) translate(0em, -2em);
 }
 }
+}
+.instagram{
+    width: 2em;
+}
+.contacts{
+    position: absolute;
+    display: flex;
+    top: 80%;
+    left:5%;
+    z-index:6;
+    gap:1em;
+    align-items: center;
+}
+.contact
+{
+    background-color: transparent;
+    border:solid;
+    border-color: #000;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: bolder;
+    padding: 1em;
+    font-size: 1em;
+}
+.contact:hover
+{
+    transform: scale(1.2);
+    transition: transform 1s linear ease;
 }
 }
