@@ -11,97 +11,75 @@ $secondSpeed: 5s;
 $secondWordCount: 2;
 $thirdWordCount: 3;
 $thirdSpeed: 2s;
+body{
+    width: 100vw;
+    height: 100vh;
+}
 
 .morphing {
     position: relative;
-    font-size: 120px;
     background-color: #000;
     color: #fff;
     min-height: 100vh;
-    filter: contrast(25) blur(1px);
 }
-
-.word {
+.word
+{
+    text-align: center;
     position: absolute;
+    font-size: 2em;
     top: 50%;
     left: 50%;
+    filter: blur(1em) opacity(0);
     transform: translate(-50%, -50%);
-    animation: word $speed infinite ease-in-out;
-
-    @for $i from 0 to $wordCount {
-        &:nth-child(#{$i + 1}) {
-            animation-delay: ($speed / ($wordCount + 1) * $i) - $speed;
-        }
-    }
-
-    @keyframes word {
-        0%,
-        5%,
-        100% {
-            filter: blur(0px);
-            opacity: 1;
-        }
-        20%,
-        80% {
-            filter: blur(1em);
-            opacity: 0;
+    animation: wordi 2s linear forwards;
+    @keyframes wordi {
+             0%{
+                filter: blur(1em) opacity(0);
+                 }
+        100%{
+            filter: blur(0) opacity(1);
         }
     }
 }
-.secondWords {
+.wordOne
+{
+    text-align: center;
     position: absolute;
+    font-size: 2em;
     top: 50%;
     left: 50%;
+    filter: blur(1em) opacity(0);
     transform: translate(-50%, -50%);
-    animation: word $secondSpeed infinite ease-in-out;
-
-    @for $i from 0 to $secondWordCount {
-        &:nth-child(#{$i + 1}) {
-            animation-delay: ($secondSpeed / ($secondWordCount + 1) * $i) - $secondSpeed;
-        }
-    }
-
-    @keyframes word {
-        0%,
-        5%,
-        100% {
-            filter: blur(0px);
-            opacity: 1;
-        }
-        20%,
-        80% {
-            filter: blur(1em);
-            opacity: 0;
+    animation: wordii 2s linear forwards;
+    @keyframes wordii {
+             0%{
+                filter: blur(1em) opacity(0);
+                 }
+        100%{
+            filter: blur(0) opacity(1);
         }
     }
 }
-.thirdWords {
+.wordTwo
+{
+    text-align: center;
     position: absolute;
+    font-size: 2em;
     top: 50%;
     left: 50%;
+    filter: blur(1em) opacity(0);
     transform: translate(-50%, -50%);
-    animation: word $secondSpeed infinite ease-in-out;
-
-    @for $i from 0 to $secondWordCount {
-        &:nth-child(#{$i + 1}) {
-            animation-delay: ($thirdSpeed / ($thirdWordCount + 1) * $i) - $thirdSpeed;
-        }
-    }
-
-    @keyframes word {
-        0%,
-        5%,
-        100% {
-            filter: blur(0px);
-            opacity: 1;
-        }
-        20%,
-        80% {
-            filter: blur(1em);
-            opacity: 0;
+    animation: wordiii 2s linear forwards;
+    @keyframes wordiii {
+             0%{
+                filter: blur(1em) opacity(0);
+                 }
+        100%{
+            filter: blur(0) opacity(1);
         }
     }
 }
+
 
 .response {
     border-style: solid;
@@ -142,4 +120,60 @@ $thirdSpeed: 2s;
     justify-items: center;
     height: 100vh;
     width: 100vw;
+}
+.jp
+{
+    text-align: center;
+}
+.pua{
+    position: absolute;
+z-index: 5;
+}
+.pua>image
+{
+    position:absolute;
+    transform-box: fill-box;
+    transform: rotateZ(-11deg) translate(-3em, 1em);
+    transform-origin: top;
+    animation: pua 2s linear forwards;
+
+@keyframes pua {
+100%{
+    transform: rotateZ(10deg) translate(-1em, -4em);
+
+}
+}
+}
+.vinilo{
+    position: absolute;
+z-index: 3;
+
+}
+.vinilo>image{
+    position:absolute;
+    z-index: 3;
+    animation: vinilo 5s linear infinite;
+animation-delay: 2.4s;
+transform-box: fill-box;
+transform-origin:center;
+@keyframes vinilo {
+    100%{
+        transform: rotateZ(360deg);
+    }
+}    
+}
+.brillo
+{
+position: absolute;
+z-index: 4;
+}
+.trackDescriber
+{
+    position:absolute;
+    z-index: 4;
+    top:30%;
+    font-size: 1em;
+font-weight: bolder;
+color: #FFFFFF;
+transform: rotateZ(-2deg) translate(41px,26px);
 }
